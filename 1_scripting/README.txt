@@ -12,3 +12,9 @@
 # Bonus if you can add an argument to monitor for a specific user
 # example command syntax 
 # ./monitor_users -w 5 -c 10 -u root
+
+
+This is a bash script to be used by NRPE for Nagios Checks
+steps:
+1) define command:
+2) define service for the host

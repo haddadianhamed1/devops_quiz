@@ -5,7 +5,7 @@
 
 1. 1_scripting/README.txt
 2. 2_packaging/README.txt
-3. 3_config_mgmt/README.txt
+3. 3_config_mgmt/README.txt #Solved
 
 Please put the work of each excercise into it's respective directory and submit a pull request to the dittovto github repostiory.  
 

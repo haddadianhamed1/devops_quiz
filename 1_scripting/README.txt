@@ -14,6 +14,11 @@
 # ./monitor_users -w 5 -c 10 -u root
 
 
+# How many users are logged in or How many shell has been spun up? 
+my script will see how many users are logged in for example test user might have 5 shells open but my script will count is as 1 user.
+please clerify.
+
+
 This is a bash script to be used by NRPE for Nagios Checks
 steps:
 1) define command:

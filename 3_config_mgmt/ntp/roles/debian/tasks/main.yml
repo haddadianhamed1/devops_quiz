@@ -1,0 +1,13 @@
+- name: install ntp package
+  apt: name={{ ntp_pkg }} state=latest
+- name: delete file
+  shell: rm -rf /etc/ntp.conf
+- name: Copy ntp config file to /etc/ntp.conf
+  copy: src=files/ntp.conf dest=/etc/ntp.conf owner=root group=root mode=644
+  notify:
+    - StartNTP
+    - TestNTP
+    - DisplayResult
+- name: starting NTP service
+  service: name={{ ntp_pkg }} state=started enabled=yes
+

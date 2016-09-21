@@ -1,0 +1,7 @@
+- name: StartNTP
+  service: name={{ ntp_pkg }} state=started
+- name: TestNTP
+  shell: ntpq -p
+  register: result
+- name: DisplayResult
+  debug: var=result

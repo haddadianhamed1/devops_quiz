@@ -1,0 +1,15 @@
+--- # Master Playbook for NTP
+
+- hosts: localhost
+  user: root
+  sudo: yes
+  connection: ssh
+  pre_tasks:
+  - name: When the Role Start
+    raw: date > /tmp/startofrole.log
+  roles:
+    - { role: redhat, when: "ansible_os_family == 'RedHat' " }
+    - { role: debian, when: "ansible_os_family == 'Debian' " }
+  post_tasks:
+  - name: When did the Role end
+    raw: date > /tmp/endofrole.log
